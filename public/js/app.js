@@ -1840,11 +1840,69 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var canvas = document.getElementById('canvas1');
 var ctx = canvas.getContext('2d');
-console.log(ctx);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var particlesArray = [];
+
+var Particle = /*#__PURE__*/function () {
+  function Particle(x, y) {
+    _classCallCheck(this, Particle);
+
+    this.x = x;
+    this.y = y;
+    this.size = 10;
+    this.weight = 2;
+    this.directionX = 1;
+  }
+
+  _createClass(Particle, [{
+    key: "update",
+    value: function update() {
+      if (this.y > canvas.height) {
+        this.y = 0 - this.size;
+        this.weight = 2;
+        this.x = Math.random() * canvas.width;
+      }
+
+      this.weight += 0.01;
+      this.y += this.weight;
+      this.x += this.directionX;
+    }
+  }, {
+    key: "draw",
+    value: function draw() {
+      ctx.fillStyle = 'maroon';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+  }]);
+
+  return Particle;
+}();
+
+var particle1 = new Particle(100, 10);
+
+function animate() {
+  ctx.fillStyle = 'rgba(255, 235, 0, 0.04)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  particle1.update();
+  particle1.draw();
+  requestAnimationFrame(animate);
+}
+
+animate();
 
 /***/ }),
 
