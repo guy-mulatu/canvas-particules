@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('partials.default')
 
-    <title>JS Rain</title>
+{{--Title--}}
+@section('title')
+    JS Rain
+@stop
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/style.css') }}" />
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
-</head>
-<body>
+@section('content')
     <canvas id="canvas1"></canvas>
     <h1 id="title1">Umbrella!</h1>
-    <script src="{{ mix('js/app.js') }}"></script>
-</body>
-</html>
+    <section class="bg-dark">
+        <div class="container">
+            <div class="col-12 text-center h1 text uppercase"><a href="{{URL('basics')}}"><span class="text-warning">go to page basics</span></a></div>
+        </div>
+    </section>
+
+    <script src="{{ mix('js/particule.js') }}"></script>
+
+@endsection
