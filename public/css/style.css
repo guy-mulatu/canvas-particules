@@ -1,6 +1,7 @@
     * {
         margin: 0;
         padding: 0;
+        color: #e2e8f0;
         box-sizing: border-box;
     }
 
@@ -19,10 +20,10 @@
         font-size: 120px;
         line-height: 110px;
         white-space: nowrap;
-        border-top: 10px solid black;
+        border-top: 10px solid white;
     }
     #title1::before {
-        content: 'is awesome';
+        content: 'make it rain';
         position: absolute;
         bottom: -70px;
         font-size: 40px;

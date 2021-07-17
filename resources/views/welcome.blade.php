@@ -16,7 +16,7 @@
 </head>
 <body>
     <canvas id="canvas1"></canvas>
-    <h1 id="title1">Boom!</h1>
+    <h1 id="title1">Umbrella!</h1>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
