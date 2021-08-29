@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\VueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/basics', function (){ return view('basics');});
+Route::get('/vue-page', [VueController::class, 'index'])->name('vue');
+Route::get('/stripe', [Controller::class, 'index'])->name('vue');
