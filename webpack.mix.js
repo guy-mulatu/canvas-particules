@@ -19,3 +19,4 @@ mix.js('resources/js/particule.js', 'public/js')
 mix.js('resources/js/basics.js', 'public/js')
 
 mix.copyDirectory("resources/css", "public/css")
+mix.copyDirectory("resources/js", "public/js")

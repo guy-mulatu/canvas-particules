@@ -2,5 +2,7 @@
     "/js/particule.js": "/js/particule.js",
     "/js/basics.js": "/js/basics.js",
     "/css/app.css": "/css/app.css",
-    "/css/style.css": "/css/style.css"
+    "/css/style.css": "/css/style.css",
+    "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/stripe.js": "/js/stripe.js"
 }

@@ -37,6 +37,12 @@ nav ul {
     margin: 20px;
 }
 
+nav ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 ol, ul {
     list-style: none;
 }
@@ -65,4 +71,34 @@ button {
 
 button:hover {
     color: lightgray;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    top: 100%;
+}
+
+.menu-developer {
+    width: 300px;
+}
+
+.menu-product {
+    width: 400px;
+}
+
+.menu-company {
+    width: 500px;
+}
+
+.menu.menu-enter {
+    display: block;
+}
+
+.menu.menu-leave {
+    display: none;
 }
