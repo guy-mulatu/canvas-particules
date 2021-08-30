@@ -81,6 +81,7 @@ button:hover {
     padding: 10px;
     width: 300px;
     top: 100%;
+    transition: opacity 500ms ease-in, transform 500ms;
 }
 
 .menu-developer {
@@ -97,6 +98,13 @@ button:hover {
 
 .menu.menu-enter {
     display: block;
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.menu.menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu.menu-leave {

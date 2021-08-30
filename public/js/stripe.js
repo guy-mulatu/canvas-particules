@@ -7,6 +7,7 @@ function handleEnter() {
     const menu = this.querySelector('.menu');
 
     menu.classList.add('menu-enter');
+    setTimeout(() => menu.classList.add('menu-enter-active'), 50 );
 }
 
 function handleLeave() {
